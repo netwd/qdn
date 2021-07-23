@@ -1,0 +1,34 @@
+.network-content-item {
+    position: relative;
+    height: 320px;
+    width: 480px;
+    background-color: #222;
+    border-radius: 25px;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.network-content__item {
+    margin-right: 10px;
+}
+.network-content-item__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.network-content__content {
+    width: 100%;
+    margin: 20px 0 40px;
+    height: 250px;
+    position: relative;
+}
+.network-content {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+}

@@ -1,0 +1,17 @@
+
+  .form {
+    max-width: 330px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: rgba(4, 0, 7, 0.349);
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .form .form__custom-button {
+    margin-top: 50px;
+    color: "#f59e00";
+    background-color: "#f59e00";
+  }
+  

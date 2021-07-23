@@ -1,0 +1,11 @@
+/* Tailwind CSS */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media all and (min-width: 1254px) {
+    .responsive-video-grid-container {
+      max-width: 1096px;
+    }
+  }
