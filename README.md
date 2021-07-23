@@ -1,3 +1,3 @@
 # QDNT
 
-``Npm run build`` to get started.
+``npm i`` & ``npm run build`` to get started.
