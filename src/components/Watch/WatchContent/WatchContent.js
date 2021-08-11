@@ -23,8 +23,7 @@ export default class WatchContent extends React.Component {
             });
             
         }
-        
-        
+
     }
    
     render() {
@@ -37,7 +36,6 @@ export default class WatchContent extends React.Component {
         <div>
             <div className="video-container">
                 <br/>
-                
                 <video className='video' id='VideoStream' class="rounded-lg border-yellow-600" Width={"800px"} preload="none" ref={player => (this.player = player)} preload="none" controls/>
                 <br/>
             </div>

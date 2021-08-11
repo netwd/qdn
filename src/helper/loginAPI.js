@@ -36,7 +36,7 @@ export default class loginAPI {
     };
 
     obtain_login_mail = (mail) => {
-        return this.init().post("login-token", {"email":mail, "destination":"https://live.dominatorfestival.nl/we-will-prevail-live"});
+        return this.init().post("login-token", {"email":mail, "destination":"https://app-login.q-dance.com/Home"});
     };
 
   }
