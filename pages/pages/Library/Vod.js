@@ -91,21 +91,25 @@ export default function Vod({ hits, VideoID, related, first_search }) {
             
             const res = await api.get_Video_Info(VideoID)
             const json = await res.data
-
-            const response_TL = await fetch('https://www.1001tracklists.com/search/result.php', {
-              method: 'POST',
-              headers: {
-                  'content-type': 'application/x-www-form-urlencoded',
-                  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36',
-                  'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-              },
-              body: 'main_search='+json.data.title+'&search_selection=9'
-          });
-          const TL_Data = await response_TL.text()
-    
-          const $ = cheerio.load(TL_Data);
-          const first_search = $('.bItm').eq(0).attr('onclick').toString().replace("window.open('", '').replace("', '_self');", '');
-
+              const response_TL = await fetch('https://www.1001tracklists.com/search/result.php', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded',
+                    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36',
+                    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+                },
+                body: 'main_search='+json.data.title+'&search_selection=9'
+            });
+            
+            const TL_Data = await response_TL.text()
+      
+            const $ = cheerio.load(TL_Data);
+            if ($('#hInfo').eq(0).text().toString().includes('returns nothing!') === true) {
+              var first_search = null
+            } else {
+              var first_search = $('.bItm').eq(0).attr('onclick').toString().replace("window.open('", '').replace("', '_self');", '');
+            }
+            
           return { hits: json.data, related: related_content_json.data, VideoID: VideoID, first_search: first_search}
         }
       } catch (e) {
