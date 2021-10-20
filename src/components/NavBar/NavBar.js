@@ -60,6 +60,7 @@ render() {
               <a href="/pages/Library/" class="text-gray-300 hover:bg-yellow-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Library</a>
               <a href="/pages/Videos/" class="text-gray-300 hover:bg-yellow-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">All Video's</a>
               <a href="/pages/Radio/" class="text-gray-300 hover:bg-yellow-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Radio</a>
+              <a href="/pages/Inbox/" class="text-gray-300 hover:bg-yellow-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Inbox</a>
             </div>
           </div>
         </div>
