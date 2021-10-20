@@ -6,7 +6,6 @@ import Badge from '@material-ui/core/Badge';
 import Grid from "@material-ui/core/Grid";
 
 import Api from "../../../src/helper/messageAPI";
-import InboxPreview from "../InboxPreview/InboxPreview"
 
 export class MessageBox extends React.Component {
   state = {
